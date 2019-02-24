@@ -16,7 +16,7 @@ struct Friends
 
 int main()
 {
-  FILE *fle2;
+  FILE *fle2=NULL;
 
   if((fle2=fopen("data.dat","rb"))==NULL)
   { 

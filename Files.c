@@ -4,11 +4,11 @@
 
 #include <stdio.h>
 
-int main(){
-  FILE *fle1 , *fle2;
+int main(int argc, char const *argv[] ){
+  FILE *fle1=NULL , *fle2=NULL;
 
-  fle1 = fopen("data.dat", "rb");
-  fle2 = fopen("data1.dat", "rb");
+  fle1 = fopen(argv[1] ,"rb");
+  fle2 = fopen(argv[2], "rb");
 
   if(fle1==NULL || fle2==NULL)
   {
@@ -30,6 +30,6 @@ int main(){
       puts("different files");
     }
     
-    int fcloseall();
+    fcloseall();
   }
 }

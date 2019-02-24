@@ -15,7 +15,7 @@ struct Friends
 
 
 int main(){
-  FILE *fle1;
+  FILE *fle1=NULL;
 
   fle1 = fopen("data.dat", "w+");
 
