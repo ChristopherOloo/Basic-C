@@ -1,5 +1,5 @@
 /*
-    program for comparing content of two files (data.dat and data1.dat)
+    program for comparing content of two files 
 */
 
 #include <stdio.h>

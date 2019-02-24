@@ -18,7 +18,7 @@ int main()
 {
   FILE *fle2=NULL;
 
-  if((fle2=fopen("data.dat","rb"))==NULL)
+  if((fle2=fopen("data.dat","r"))==NULL)
   { 
     puts("Error in opening files");
   }

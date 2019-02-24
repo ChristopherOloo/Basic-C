@@ -2,6 +2,7 @@
     A program tha gives a series of prime numbers upom the range entered.
 */
 
+
 #include <stdio.h>
 
 int main()
@@ -13,7 +14,7 @@ int main()
   for(i=2; i<num;i++)
   { 
     
-    for(j=2;j<num;j++)
+    for(j=2;j<i;j++)
     {
       if((i%j)==0)
         break;

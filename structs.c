@@ -43,7 +43,7 @@ int main()
 
   //dynamic manual Entering of Data into files 
   FILE *Book3=NULL;
-  struct Book book3;
+  //struct Book book3;
 
   Book3 = fopen("book3.dat", "ab+");
   if(Book3==NULL)
@@ -58,7 +58,8 @@ int main()
     scanf("%d", &stop);
 
     while(stop ==1)
-    {
+    { 
+      struct Book book3 = {"","","",0,0};
       printf("\nTitle : ");
       scanf("%s",book3.Title);
       printf("\nAuthor : ");
@@ -105,7 +106,7 @@ void view(void)
 {
   FILE *Book3=NULL;
 
-  Book3 = fopen("book3.dat", "r");
+  Book3 = fopen("book3.dat", "rb");
 
   if(Book3==NULL)
   {
@@ -114,7 +115,7 @@ void view(void)
 
   else
   { 
-    printf("\n\t%s\t\t%s\t\t%s\t\t%s\t%s", "TITLE", "AUTHOUR", "PUBLISHER", "EDITION", "YEAR");
+    printf("\n\t%s\t\t%s\t\t%s\t%s\t\t%s", "TITLE", "AUTHOUR", "PUBLISHER", "EDITION", "YEAR");
 
     while(!feof(Book3))
     {
@@ -123,8 +124,8 @@ void view(void)
     int result = fread(&book3, sizeof(struct Book),1,Book3);
     if(result != 0) 
     {
-      struct Book book3;
-      printf("\n\t%s\t\t%s\t\t%s\t\t%d\t%d\n", book3.Title, book3.Author, book3.Publisher, book3.Edition, book3.Year_published);
+      
+      printf("\n\t%s\t\t%s\t\t%s\t\t%d\t\t%d\n", book3.Title, book3.Author, book3.Publisher, book3.Edition, book3.Year_published);
     }
     
     }
